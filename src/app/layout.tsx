@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${montserrat.className} ${geistMono.variable} antialiased`}
       >
@@ -39,6 +39,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          forcedTheme="dark"
         >
           {children}
         </ThemeProvider>

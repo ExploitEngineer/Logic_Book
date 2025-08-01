@@ -1,65 +1,81 @@
 "use client";
+
 import React, { useState } from "react";
-import {
-  HoveredLink,
-  Menu,
-  MenuItem,
-  ProductItem,
-} from "../aceternity/navbar-menu";
+import { Menu, MenuItem } from "../aceternity/navbar-menu";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu as MenuIcon, X } from "lucide-react";
+
+const links = [
+  { href: "#features", label: "Features" },
+  { href: "#why", label: "Why" },
+  { href: "#download", label: "Download" },
+  { href: "#preview", label: "Preview" },
+  { href: "#author", label: "Author" },
+];
 
 export function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+    <motion.div
+      initial={{ opacity: 0, y: -70 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+      className={cn(
+        "md:fixed absolute top-6 inset-x-0 mx-auto max-w-2xl z-50",
+        className,
+      )}
     >
-      <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Algochurn"
-              href="https://algochurn.com"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Prepare for tech interviews like never before."
-            />
-            <ProductItem
-              title="Tailwind Master Kit"
-              href="https://tailwindmasterkit.com"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Production ready Tailwind css components for your next project"
-            />
-            <ProductItem
-              title="Moonbeam"
-              href="https://gomoonbeam.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Never write from scratch again. Go from idea to blog in minutes."
-            />
-            <ProductItem
-              title="Rogue"
-              href="https://userogue.com"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-            />
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/hobby">Hobby</HoveredLink>
-            <HoveredLink href="/individual">Individual</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-            <HoveredLink href="/enterprise">Enterprise</HoveredLink>
-          </div>
-        </MenuItem>
-      </Menu>
-    </div>
+      {/* Desktop menu */}
+      <div className="hidden md:block">
+        <Menu>
+          {links.map((link) => (
+            <MenuItem key={link.href} href={link.href}>
+              {link.label}
+            </MenuItem>
+          ))}
+        </Menu>
+      </div>
+
+      {/* toggle buttons */}
+      <div className="md:hidden flex justify-end px-4">
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="text-white p-2"
+          aria-label="Toggle mobile menu"
+        >
+          {isOpen ? (
+            <X color="white" className="w-6 h-6 relative z-100" />
+          ) : (
+            <MenuIcon className="w-6 h-6" />
+          )}
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            key="mobile-menu"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-90 backdrop-blur-sm z-40 flex flex-col items-center justify-center space-y-8"
+          >
+            {links.map((link) => (
+              <MenuItem
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </MenuItem>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 }
