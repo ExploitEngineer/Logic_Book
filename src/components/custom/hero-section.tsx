@@ -57,15 +57,15 @@ export function HeroSection() {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
-            href="https://f0a093076b.author-pages.com/landers/free-book-offer"
-            target="_blank"
-          >
+          <a href="#features">
             <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 cursor-pointer dark:bg-white dark:text-black dark:hover:bg-gray-200">
               Explore Now
             </button>
           </a>
-          <a href="#download">
+          <a
+            href="https://drive.google.com/uc?export=download&id=1LQ2l9d2jD1wcUKmUjEMN-hGGlSRTyhcQ"
+            target="_blank"
+          >
             <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 dark:border-gray-700 dark:bg-black dark:text-white dark:hover:bg-secondary/80 cursor-pointer">
               Download
             </button>
