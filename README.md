@@ -10,7 +10,7 @@ An educational **website for a book** that teaches logic concepts through clear 
 ---
 # 📘 Explore the Logic Book – Your Gateway to Smart Thinking
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ZainulabdeenOfficial/Logic_Book/refs/heads/main/public/assets/images/book.webp" alt="Logic Book Banner" width="600"/>
+  <img src="https://raw.githubusercontent.com/ZainulabdeenOfficial/Logic_Book/refs/heads/main/public/assets/images/book.webp" alt="Logic Book Banner" width="400"/>
 </p>
 
 > Learn logic visually and interactively through a beautifully designed book platform.
