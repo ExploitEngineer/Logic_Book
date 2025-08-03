@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ZainulabdeenOfficial/Logic_Book/main/public/assets/images/bookwebsite.jpg" width="800" alt="Logic Book Banner"/>
+</p>
+
+
 # 📘 Logic Book
 
 An educational **website for a book** that teaches logic concepts through clear lessons, interactive examples, and structured chapters. Ideal for students, teachers, and self-learners looking to master logical reasoning fundamentals.
