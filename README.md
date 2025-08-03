@@ -8,6 +8,12 @@
 An educational **website for a book** that teaches logic concepts through clear lessons, interactive examples, and structured chapters. Ideal for students, teachers, and self-learners looking to master logical reasoning fundamentals.
 
 ---
+# 📘 Explore the Logic Book – Your Gateway to Smart Thinking
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ZainulabdeenOfficial/Logic_Book/refs/heads/main/public/assets/images/book.webp" alt="Logic Book Banner" width="600"/>
+</p>
+
+> Learn logic visually and interactively through a beautifully designed book platform.
 
 ## 🧠 Workflow Diagram
 
