@@ -1,5 +1,6 @@
 import { HeroSection } from "@/components/custom/hero-section";
 import { FeaturesSection } from "@/components/custom/features-section";
+import { WhyReadThisBookSection } from "@/components/custom/why-read-this-book-section";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
           </div>
 
           <FeaturesSection />
+          <WhyReadThisBookSection />
         </div>
       </header>
     </div>
