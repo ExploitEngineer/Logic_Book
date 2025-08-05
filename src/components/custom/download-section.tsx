@@ -7,6 +7,7 @@ interface DownloadButton {
   src: string;
   alt: string;
   label: string;
+  link: string;
 }
 
 const downloadButtonsData: DownloadButton[] = [
@@ -14,6 +15,7 @@ const downloadButtonsData: DownloadButton[] = [
     src: "/assets/images/google-drive.webp",
     alt: "Google Drive",
     label: "Google Drive PDF",
+    link: "https://drive.google.com/uc?export=download&id=1LQ2l9d2jD1wcUKmUjEMN-hGGlSRTyhcQ",
   },
   {
     src: "/assets/images/android.png",
