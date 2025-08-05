@@ -8,7 +8,7 @@ export function PreviewSection() {
 
   return (
     <section
-      id="download"
+      id="preview"
       className="max-w-7xl min-h-screen relative m-auto pt-40 pb-20"
     >
       {/* Gradient SVG */}

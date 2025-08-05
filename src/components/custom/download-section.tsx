@@ -8,7 +8,6 @@ interface DownloadButton {
   download: string;
   alt: string;
   label: string;
- 
 }
 
 const downloadButtonsData: DownloadButton[] = [
@@ -32,6 +31,12 @@ const downloadButtonsData: DownloadButton[] = [
       "https://github.com/ZainulabdeenOfficial/Logic_Book/releases/download/Logic_Book/iphone.ipa",
     alt: "Apple",
     label: "Apple App",
+  },
+  {
+    src: "/assets/images/kotobee.svg",
+    download: "https://books.kotobee.com/library/#/book/118217/reader",
+    alt: "Read Online",
+    label: "Read Online",
   },
 ];
 
@@ -91,7 +96,7 @@ export function DownloadSection() {
         </motion.p>
 
         {/* Download Buttons */}
-        <div className="mt-10 flex flex-wrap gap-6 justify-center bg-[rgb(36,29,18)]/90 backdrop-blur-md rounded-2xl px-8 py-10 shadow-2xl border border-yellow-300/10">
+        <div className="mt-10 w-[88%] flex flex-wrap gap-6 justify-center bg-[rgb(36,29,18)]/90 backdrop-blur-md rounded-2xl px-8 py-10 shadow-2xl border border-yellow-300/10">
           {downloadButtonsData.map((item: DownloadButton, index: number) => (
             <a key={index} href={item.download}>
               <button className="w-60 flex items-center gap-3 transform rounded-xl border border-gray-700/60 bg-white/90 px-6 py-3 font-medium text-black transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/50 hover:text-white backdrop-blur-md">
