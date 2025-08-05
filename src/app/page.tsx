@@ -47,8 +47,8 @@ export default function Home() {
 
           <FeaturesSection />
           <WhyReadThisBookSection />
-          <DownloadSection />
           <PreviewSection />
+          <DownloadSection />
         </div>
       </header>
     </div>

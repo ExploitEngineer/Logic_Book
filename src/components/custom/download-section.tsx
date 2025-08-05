@@ -5,6 +5,7 @@ import Image from "next/image";
 
 interface DownloadButton {
   src: string;
+  download: string;
   alt: string;
   label: string;
  
@@ -13,16 +14,22 @@ interface DownloadButton {
 const downloadButtonsData: DownloadButton[] = [
   {
     src: "/assets/images/google-drive.webp",
+    download:
+      "https://drive.google.com/uc?export=download&id=1LQ2l9d2jD1wcUKmUjEMN-hGGlSRTyhcQ",
     alt: "Google Drive",
     label: "Google Drive PDF",
   },
   {
     src: "/assets/images/android.png",
+    download:
+      "https://github.com/ZainulabdeenOfficial/Logic_Book/releases/download/Logic/app-release.apk",
     alt: "Android",
     label: "Android App",
   },
   {
     src: "/assets/images/apple.png",
+    download:
+      "https://github.com/ZainulabdeenOfficial/Logic_Book/releases/download/Logic_Book/iphone.ipa",
     alt: "Apple",
     label: "Apple App",
   },
@@ -35,7 +42,7 @@ export function DownloadSection() {
       className="max-w-7xl min-h-screen relative m-auto pt-40"
     >
       {/* Gradient SVG */}
-      <div className="absolute lg:-left-[45%] -left-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
+      <div className="absolute lg:-right-[45%] -right-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
         <svg
           viewBox="0 0 100 100"
           preserveAspectRatio="xMidYMid meet"
@@ -86,13 +93,12 @@ export function DownloadSection() {
         {/* Download Buttons */}
         <div className="mt-10 flex flex-wrap gap-6 justify-center bg-[rgb(36,29,18)]/90 backdrop-blur-md rounded-2xl px-8 py-10 shadow-2xl border border-yellow-300/10">
           {downloadButtonsData.map((item: DownloadButton, index: number) => (
-            <button
-              key={index}
-              className="w-60 flex items-center gap-3 transform rounded-xl border border-gray-700/60 bg-white/90 px-6 py-3 font-medium text-black transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/50 hover:text-white backdrop-blur-md"
-            >
-              <Image src={item.src} alt={item.alt} width={28} height={28} />
-              {item.label}
-            </button>
+            <a key={index} href={item.download}>
+              <button className="w-60 flex items-center gap-3 transform rounded-xl border border-gray-700/60 bg-white/90 px-6 py-3 font-medium text-black transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/50 hover:text-white backdrop-blur-md">
+                <Image src={item.src} alt={item.alt} width={28} height={28} />
+                {item.label}
+              </button>
+            </a>
           ))}
         </div>
       </div>

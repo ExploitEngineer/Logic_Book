@@ -6,18 +6,13 @@ import { motion } from "framer-motion";
 export function PreviewSection() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  const sendMessageToIframe = (command: "page-up" | "page-down") => {
-    if (iframeRef.current?.contentWindow) {
-      iframeRef.current?.contentWindow.postMessage({ eventType: command }, "*");
-    }
-  };
   return (
     <section
       id="download"
-      className="max-w-7xl min-h-screen relative m-auto pt-40"
+      className="max-w-7xl min-h-screen relative m-auto pt-40 pb-20"
     >
       {/* Gradient SVG */}
-      <div className="absolute lg:-right-[45%] -right-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
+      <div className="absolute lg:-left-[45%] -left-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
         <svg
           viewBox="0 0 100 100"
           preserveAspectRatio="xMidYMid meet"
@@ -73,7 +68,7 @@ export function PreviewSection() {
           transition={{ duration: 0.4, delay: 0.4 }}
           className="w-full flex justify-center mt-8"
         >
-          <div className="w-full max-w-[90%] md:max-w-[700px] h-[400px] md:h-[700px] rounded-2xl overflow-hidden border border-yellow-300/10 shadow-2xl bg-[rgb(36,29,18)]/90 backdrop-blur-md relative">
+          <div className="w-full max-w-[90%] md:max-w-[700px] h-[400px] md:h-[750px] rounded-2xl overflow-hidden border border-yellow-300/10 shadow-2xl bg-[rgb(36,29,18)]/90 backdrop-blur-md relative">
             <iframe
               ref={iframeRef}
               src="https://archive.org/embed/logic-STANDARD"
