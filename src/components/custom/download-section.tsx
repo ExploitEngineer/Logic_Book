@@ -38,6 +38,20 @@ const downloadButtonsData: DownloadButton[] = [
     alt: "Read Online",
     label: "Read Online",
   },
+  {
+    src: "/assets/images/dev.webp",
+    download:
+      "https://dev.to/zainulabdeenofficial/why-every-beginner-coder-should-read-logic-by-m-zain-ul-abideen-81g",
+    alt: "Read Article",
+    label: "Read Article",
+  },
+  {
+    src: "/assets/images/internet-archive.webp",
+    download:
+      "https://archive.org/details/logic-STANDARD/page/n1/mode/1up?q=M+Zain+Ul+Abideen",
+    alt: "Read Online",
+    label: "Read Online",
+  },
 ];
 
 export function DownloadSection() {

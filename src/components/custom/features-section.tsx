@@ -5,7 +5,33 @@ import { motion } from "framer-motion";
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="max-w-7xl m-auto pt-40">
+    <section id="features" className="relative max-w-7xl m-auto pt-40">
+      {/* Gradient SVG */}
+      <div className="absolute lg:-left-[45%] -left-96 lg:-top-50 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
+        <svg
+          viewBox="0 0 100 100"
+          preserveAspectRatio="xMidYMid meet"
+          className="w-full h-full opacity-80"
+        >
+          <defs>
+            <radialGradient id="blob-grad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="rgba(251,191,36,0.4)" />
+              <stop offset="60%" stopColor="rgba(251,191,36,0.15)" />
+              <stop offset="100%" stopColor="transparent" />
+            </radialGradient>
+            <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+            </filter>
+          </defs>
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            fill="url(#blob-grad)"
+            filter="url(#blur)"
+          />
+        </svg>
+      </div>
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +53,6 @@ export function FeaturesSection() {
         particleCount={12}
         glowColor="160, 84, 9"
       />
-      ;
     </section>
   );
 }
