@@ -18,7 +18,10 @@ const items: string[] = [
 
 export function WhyReadThisBookSection() {
   return (
-    <section id="why" className="max-w-7xl min-h-screen relative m-auto pt-40">
+    <section
+      id="why"
+      className="max-w-7xl min-h-screen relative m-auto pt-60 px-4"
+    >
       {/* Gradient SVG */}
       <div className="absolute lg:-right-[45%] -right-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
         <svg

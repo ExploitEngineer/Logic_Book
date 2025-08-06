@@ -3,6 +3,8 @@ import { FeaturesSection } from "@/components/custom/features-section";
 import { WhyReadThisBookSection } from "@/components/custom/why-read-this-book-section";
 import { DownloadSection } from "@/components/custom/download-section";
 import { PreviewSection } from "@/components/custom/preview-section";
+import { AuthorInfo } from "@/components/custom/author-info";
+import { Footer } from "@/components/custom/footer";
 
 export default function Home() {
   return (
@@ -49,6 +51,8 @@ export default function Home() {
           <WhyReadThisBookSection />
           <PreviewSection />
           <DownloadSection />
+          <AuthorInfo />
+          <Footer />
         </div>
       </header>
     </div>
