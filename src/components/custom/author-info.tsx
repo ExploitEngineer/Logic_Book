@@ -57,7 +57,7 @@ export function AuthorInfo() {
           transition={{ duration: 0.3, delay: 0.6 }}
           className="relative z-10 mx-auto max-w-xl py-2 text-center text-lg font-medium text-yellow-600 dark:text-yellow-400 italic"
         >
-          "Teaching how to think — not just how to code."
+          &quot;Teaching how to think — not just how to code.&quot;
         </motion.p>
 
         <motion.p
@@ -69,10 +69,10 @@ export function AuthorInfo() {
         >
           <strong>M Zain Ul Abideen</strong> is a passionate programmer,
           educator, and logic enthusiast who believes that the key to great
-          coding isn’t memorizing syntax — it’s <em>learning how to think</em>.
-          With years of experience mentoring beginners and self-taught
-          developers, Zain excels at transforming complex concepts into simple,
-          actionable steps.
+          coding isn&apos;t memorizing syntax &mdash; it&apos;s
+          <em>learning how to think</em>. With years of experience mentoring
+          beginners and self-taught developers, Zain excels at transforming
+          complex concepts into simple, actionable steps.
         </motion.p>
 
         <motion.p
@@ -86,9 +86,10 @@ export function AuthorInfo() {
           overwhelmed by challenges. Struggling with logic during his early
           coding days, he discovered a powerful mindset shift — viewing code as
           structured problem-solving rather than just writing instructions. This
-          perspective became the foundation for his book:{" "}
+          perspective became the foundation for his book:
           <em>
-            “Logic – Mastering Problem-Solving Skills for Coding Success.”
+            &ldquo;Logic &ndash; Mastering Problem-Solving Skills for Coding
+            Success.&rdquo;
           </em>
         </motion.p>
 
@@ -110,8 +111,8 @@ export function AuthorInfo() {
               <strong>Mentor</strong> to beginner & self-taught developers
             </li>
             <li>
-              Focuses on <em>“thinking like a programmer”</em> rather than rote
-              syntax
+              Focuses on <em>&ldquo;thinking like a programmer&rdquo;</em>{" "}
+              rather than rote syntax
             </li>
           </ul>
         </motion.div>
@@ -125,7 +126,7 @@ export function AuthorInfo() {
         >
           Outside of teaching, Zain loves exploring emerging tech, building
           passion projects, and sharing insights with the global developer
-          community. His goal? To help you become not just a coder — but a
+          community. His goal? To help you become not just a coder &mdash; but a
           confident, independent problem solver.
         </motion.p>
 
