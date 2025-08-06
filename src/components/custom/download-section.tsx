@@ -52,6 +52,18 @@ const downloadButtonsData: DownloadButton[] = [
     alt: "Read Online",
     label: "Read Online",
   },
+  {
+    src: "/assets/images/leanpub.png",
+    download: "https://leanpub.com/Logic_Book",
+    alt: "Buy Book",
+    label: "Buy Book",
+  },
+  {
+    src: "/assets/images/zain.webp",
+    download: "https://zucreek55.gumroad.com/l/logic",
+    alt: "Buy Book",
+    label: "Buy Book",
+  },
 ];
 
 export function DownloadSection() {
@@ -113,7 +125,7 @@ export function DownloadSection() {
         <div className="mt-10 w-[90%] flex flex-wrap gap-6 justify-center bg-[rgb(36,29,18)]/90 backdrop-blur-md rounded-2xl px-8 py-10 shadow-2xl border border-yellow-300/10">
           {downloadButtonsData.map((item: DownloadButton, index: number) => (
             <a key={index} href={item.download}>
-              <button className="w-60 flex items-center gap-3 transform rounded-xl border border-gray-700/60 bg-white/90 px-6 py-3 font-medium text-black transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/50 hover:text-white backdrop-blur-md">
+              <button className="w-60 flex items-center gap-3 transform rounded-xl border border-gray-700/60 bg-white/90 px-6 py-4 font-medium text-black transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/50 hover:text-white backdrop-blur-md">
                 <Image src={item.src} alt={item.alt} width={28} height={28} />
                 {item.label}
               </button>
