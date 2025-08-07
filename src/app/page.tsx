@@ -8,8 +8,8 @@ import { Footer } from "@/components/custom/footer";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen overflow-x-hidden">
-      <header className="w-full h-screen">
+    <div className="w-full h-full overflow-x-hidden">
+      <header className="w-full h-full">
         <div className="min-h-screen w-full relative">
           <div
             className="absolute inset-0 z-0"
@@ -20,14 +20,16 @@ export default function Home() {
           />
 
           <HeroSection />
-          <FeaturesSection />
-          <WhyReadThisBookSection />
-          <PreviewSection />
-          <DownloadSection />
-          <AuthorInfo />
-          <Footer />
         </div>
       </header>
+      <main className="w-full h-full bg-black pb-32">
+        <FeaturesSection />
+        <WhyReadThisBookSection />
+        <PreviewSection />
+        <DownloadSection />
+        <AuthorInfo />
+      </main>
+      <Footer />
     </div>
   );
 }

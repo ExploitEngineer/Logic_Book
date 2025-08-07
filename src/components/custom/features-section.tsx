@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="relative max-w-7xl m-auto pt-40">
+    <section
+      id="features"
+      className="relative flex m-auto max-w-7xl flex-col items-center justify-center px-4 py-20"
+    >
       {/* Gradient SVG */}
       <div className="absolute lg:-left-[45%] -left-96 lg:-top-50 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
         <svg

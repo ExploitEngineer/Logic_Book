@@ -20,7 +20,7 @@ export function WhyReadThisBookSection() {
   return (
     <section
       id="why"
-      className="max-w-7xl min-h-screen relative m-auto pt-60 px-4"
+      className="relative flex m-auto max-w-7xl flex-col items-center justify-center px-4 py-20"
     >
       {/* Gradient SVG */}
       <div className="absolute lg:-right-[45%] -right-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">

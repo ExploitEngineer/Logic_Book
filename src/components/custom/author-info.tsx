@@ -5,7 +5,10 @@ import { Github, Linkedin, Instagram } from "lucide-react";
 
 export function AuthorInfo() {
   return (
-    <section id="author" className="max-w-7xl min-h-screen relative m-auto">
+    <section
+      id="author"
+      className="relative flex m-auto max-w-7xl flex-col items-center justify-center px-4 pt-20"
+    >
       {/* Background SVG */}
       <div className="absolute lg:-left-[45%] -left-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">
         <svg

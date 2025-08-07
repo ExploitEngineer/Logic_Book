@@ -9,7 +9,7 @@ export function PreviewSection() {
   return (
     <section
       id="preview"
-      className="max-w-7xl min-h-screen relative m-auto pt-40 pb-20 px-4"
+      className="max-w-7xl relative m-auto px-4 py-20"
     >
       {/* Gradient SVG */}
       <div className="absolute lg:-left-[45%] -left-96 lg:-top-40 -top-15 w-[700px] h-[700px] z-10 pointer-events-none overflow-hidden">

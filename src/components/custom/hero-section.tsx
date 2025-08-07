@@ -6,9 +6,9 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <div className="flex m-auto max-w-7xl pt-24 flex-col items-center justify-center">
+    <div className="min-h-screen flex m-auto max-w-7xl pt-24 flex-col items-center justify-center">
       <Navbar />
-      <div className="px-4 py-10 md:py-20">
+      <section className="px-4 py-20">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl dark:text-slate-300">
           {" Build Smarter Arguments. Think More Clearly."
             .split(" ")
@@ -90,7 +90,7 @@ export function HeroSection() {
             <Image src="/assets/images/book.webp" alt="Book" fill />
           </div>
         </motion.div>
-      </div>
+      </section>
     </div>
   );
 }

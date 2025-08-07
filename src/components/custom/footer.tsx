@@ -4,7 +4,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="relative w-full bg-neutral-950 border-t border-neutral-800 mt-32 pt-16 pb-8 px-4 overflow-hidden">
+    <footer className="relative w-full bg-neutral-950 border-t border-neutral-800 pt-16 pb-8 px-4 overflow-hidden">
       <div className="absolute -right-96 -bottom-40 w-[700px] h-[700px] z-0 pointer-events-none">
         <svg
           viewBox="0 0 100 100"
