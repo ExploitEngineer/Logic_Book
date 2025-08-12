@@ -64,6 +64,46 @@ const downloadButtonsData: DownloadButton[] = [
     alt: "Buy Book",
     label: "Buy Book",
   },
+  {
+    src: "/assets/images/amazon.png",
+    download: "https://www.amazon.com/dp/B0FLPMBWWB",
+    alt: "Buy Book",
+    label: "Buy Book",
+  },
+  {
+    src: "/assets/images/barnes.png",
+    download:
+      "https://www.barnesandnoble.com/w/logic-m-zain-ul-abideen/1148019588?ean=2940182275637",
+    alt: "Buy Book",
+    label: "Buy Book",
+  },
+  {
+    src: "/assets/images/apple.svg",
+    download: "https://books.apple.com/us/book/logic/id6749749456",
+    alt: "Buy Book",
+    label: "Buy Book",
+  },
+  {
+    src: "/assets/images/kobo.png",
+    download:
+      "https://www.kobo.com/ww/en/ebook/logic-76?sId=b12c2cd3-5d5b-446a-9fe9-1e930762ba71",
+    alt: "Buy Book",
+    label: "Buy Book",
+  },
+  {
+    src: "/assets/images/storytel.svg",
+    download:
+      "https://www.storytel.com/tv/books/logic-mastering-problem-solving-skills-for-coding-success-11993655#pricePlans",
+    alt: "Listen & Read",
+    label: "Listen & Read",
+  },
+  {
+    src: "/assets/images/everand.png",
+    download:
+      "https://www.everand.com/book/898945796/Logic-Mastering-Problem-Solving-Skills-for-Coding-Success",
+    alt: "Read Online",
+    label: "Read Online",
+  },
 ];
 
 export function DownloadSection() {
@@ -126,7 +166,15 @@ export function DownloadSection() {
           {downloadButtonsData.map((item: DownloadButton, index: number) => (
             <a key={index} href={item.download}>
               <button className="w-60 flex items-center gap-3 transform rounded-xl border border-gray-700/60 bg-white/90 px-6 py-4 font-medium text-black transition-all cursor-pointer duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-primary/50 hover:text-white backdrop-blur-md">
-                <Image src={item.src} alt={item.alt} width={28} height={28} />
+                <div className="w-7 h-7 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    width={28}
+                    height={28}
+                    className="object-contain"
+                  />
+                </div>
                 {item.label}
               </button>
             </a>
